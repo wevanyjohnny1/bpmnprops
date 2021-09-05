@@ -1,0 +1,29 @@
+{
+  "name": "Etapa",
+  "prefix": "etapa",
+  "uri": "http://magic",
+  "xml": {
+    "tagAlias": "lowerCase"
+  },
+  "associations": [],
+  "types": [
+    {
+      "name": "BewitchedStartEvent",
+      "extends": [
+        "bpmn:StartEvent"
+      ],
+      "properties": [
+        {
+          "name": "etapa",
+          "isAttr": true,
+          "type": "String"
+        },
+        {
+          "name": "data",
+          "isAttr": true,
+          "type": "String"
+        }
+      ]
+    }
+  ]
+}
