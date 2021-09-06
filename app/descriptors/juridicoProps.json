@@ -1,0 +1,47 @@
+{
+  "name": "JuridicoProps",
+  "prefix": "props",
+  "uri": "http://props",
+  "xml": {
+    "tagAlias": "lowerCase"
+  },
+  "associations": [],
+  "types": [
+    {
+      "name": "PrimeiroEventoJuridico",
+      "extends": [
+        "bpmn:StartEvent"
+      ],
+      "properties": [
+        {
+          "name": "starteventprimeiraprop",
+          "isAttr": true,
+          "type": "String"
+        },
+        {
+          "name": "starteventsegundaprop",
+          "isAttr": true,
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "ActivityJuridico",
+      "extends": [
+        "bpmn:Activity"
+      ],
+      "properties": [
+        {
+          "name": "activityprimeiraprop",
+          "isAttr": true,
+          "type": "String"
+        },
+        {
+          "name": "activitysegundaprop",
+          "isAttr": true,
+          "type": "String"
+        }
+      ]
+    }
+  ]
+}

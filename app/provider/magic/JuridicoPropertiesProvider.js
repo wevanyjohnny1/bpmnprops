@@ -1,29 +1,28 @@
 // Require your custom property entries.
-import spellProps from './parts/SpellProps';
+import juridicoProps from './parts/JuridicoProps';
 
 var LOW_PRIORITY = 500;
 
-
-// Create the custom magic tab.
+// Create the custom juridico tab.
 // The properties are organized in groups.
-function createMagicTabGroups(element, translate) {
+function criarAbaJuridico(element, translate) {
 
   // Create a group called "Black Magic".
-  var blackMagicGroup = {
-    id: 'black-magic',
-    label: 'Descrição',
+  var JuridicoGroup = {
+    id: 'juridico-tab',
+    label: 'Teste Tab',
     entries: []
   };
 
   // Add the spell props to the black magic group.
-  spellProps(blackMagicGroup, element, translate);
+  juridicoProps(JuridicoGroup, element, translate);
 
   return [
-    blackMagicGroup
+    JuridicoGroup
   ];
 }
 
-export default function MagicPropertiesProvider(propertiesPanel, translate) {
+export default function JuridicoPropertiesProvider(propertiesPanel, translate) {
 
   // Register our custom magic properties provider.
   // Use a lower priority to ensure it is loaded after the basic BPMN properties.
@@ -34,13 +33,13 @@ export default function MagicPropertiesProvider(propertiesPanel, translate) {
     return function(entries) {
 
       // Add the "magic" tab
-      var magicTab = {
-        id: 'etapa',
-        label: 'Etapa',
-        groups: createMagicTabGroups(element, translate)
+      var juridicoTab = {
+        id: 'juridicotab',
+        label: 'Tab',
+        groups: criarAbaJuridico(element, translate)
       };
 
-      entries.push(magicTab);
+      entries.push(juridicoTab);
   
       // Show general + "magic" tab
       return entries;
@@ -48,4 +47,4 @@ export default function MagicPropertiesProvider(propertiesPanel, translate) {
   };
 }
 
-MagicPropertiesProvider.$inject = [ 'propertiesPanel', 'translate' ]
+JuridicoPropertiesProvider.$inject = [ 'propertiesPanel', 'translate' ]

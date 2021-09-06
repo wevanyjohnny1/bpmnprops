@@ -1,6 +1,6 @@
-import MagicPropertiesProvider from './MagicPropertiesProvider';
+import JuridicoPropertiesProvider from './JuridicoPropertiesProvider';
 
 export default {
-  __init__: [ 'magicPropertiesProvider' ],
-  magicPropertiesProvider: [ 'type', MagicPropertiesProvider ]
+  __init__: [ 'juridicoPropertiesProvider' ],
+  juridicoPropertiesProvider: [ 'type', JuridicoPropertiesProvider ]
 };
