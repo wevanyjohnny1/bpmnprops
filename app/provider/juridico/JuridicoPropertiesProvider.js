@@ -1,24 +1,44 @@
 // Require your custom property entries.
-import juridicoProps from './parts/JuridicoProps';
+import juridicoTabOneProps from './parts/JuridicoTabOneProps';
+import juridicoTabTwoProps from './parts/JuridicoTabTwoProps';
 
 var LOW_PRIORITY = 500;
 
 // Create the custom juridico tab.
 // The properties are organized in groups.
-function criarAbaJuridico(element, translate) {
+function criarPrimeiraAbaJuridico(element, translate) {
 
-  // Create a group called "JuridicoGroup".
-  var JuridicoGroup = {
-    id: 'juridico-tab',
-    label: 'Teste Tab',
+  // Create a group called "JuridicoFirstGroup".
+  var JuridicoFirstGroup = {
+    id: 'primeira-tab',
+    label: 'Primeira Tab',
+    //entries recebe as props
     entries: []
   };
 
-  // Add the spell props to the black magic group.
-  juridicoProps(JuridicoGroup, element, translate);
+  // Add the props to the group.
+  juridicoTabOneProps(JuridicoFirstGroup, element, translate);
 
   return [
-    JuridicoGroup
+    JuridicoFirstGroup
+  ];
+}
+
+function criarSegundaAbaJuridico(element, translate) {
+
+  // Create a group called "JuridicoFirstGroup".
+  var JuridicoSecondGroup = {
+    id: 'segunda-tab',
+    label: 'Segunda Tab',
+    //entries recebe as props
+    entries: []
+  };
+
+  // Add the props to the group.
+  juridicoTabTwoProps(JuridicoSecondGroup, element, translate);
+
+  return [
+    JuridicoSecondGroup
   ];
 }
 
@@ -32,14 +52,20 @@ export default function JuridicoPropertiesProvider(propertiesPanel, translate) {
 
     return function(entries) {
 
-      // Add the "magic" tab
-      var juridicoTab = {
-        id: 'juridicotab',
-        label: 'Tab',
-        groups: criarAbaJuridico(element, translate)
+      // Add the tab
+      var juridicoFirstTab = {
+        id: 'juridicofirsttab',
+        label: 'tab 1',
+        groups: criarPrimeiraAbaJuridico(element, translate)
       };
 
-      entries.push(juridicoTab);
+      var juridicoSecondTab = {
+        id: 'juridicosecondtab',
+        label: 'tab 2',
+        groups: criarSegundaAbaJuridico(element, translate)
+      }
+
+      entries.push(juridicoFirstTab, juridicoSecondTab);
   
       // Show general + "magic" tab
       return entries;

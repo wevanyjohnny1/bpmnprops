@@ -26,6 +26,14 @@ export default function(group, element, translate) {
       label : 'PrimeiroEventoJuridico',
       modelProperty : 'starteventsegundaprop'
     }
+    )),
+    group.entries.push(entryFactory.checkbox(translate,
+      {
+        id : 'starteventterceiraprop',
+        description : 'prop 3 primeiro evento',
+        label : 'PrimeiroEventoJuridico',
+        modelProperty : 'starteventterceirprop'
+      }
     ))
   }
 
