@@ -65,7 +65,8 @@ export default function JuridicoPropertiesProvider(propertiesPanel, translate) {
         groups: criarSegundaAbaJuridico(element, translate)
       }
 
-      entries.push(juridicoFirstTab, juridicoSecondTab);
+      entries.push(juridicoFirstTab);
+      entries.push(juridicoSecondTab);
   
       // Show general + "magic" tab
       return entries;
