@@ -11,6 +11,7 @@ import {
 } from 'min-dash';
 
 import diagramXML from '../resources/newDiagram.bpmn';
+import propsDiagram from '../resources/propsdiagram.bpmn';
 
 var container = $('#js-drop-zone');
 
@@ -30,7 +31,8 @@ var bpmnModeler = new BpmnModeler({
 });
 
 function createNewDiagram() {
-  openDiagram(diagramXML);
+  // openDiagram(diagramXML);
+  openDiagram(propsDiagram);
 }
 
 async function openDiagram(xml) {
