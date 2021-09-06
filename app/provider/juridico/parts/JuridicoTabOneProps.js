@@ -34,7 +34,27 @@ export default function(group, element, translate) {
         label : 'PrimeiroEventoJuridico',
         modelProperty : 'starteventterceirprop'
       }
+    )),
+    group.entries.push(entryFactory.selectBox(translate,
+      {
+        id : 'starteventterceiraprop',
+        description : 'prop 3 primeiro evento',
+        label : 'PrimeiroEventoJuridico',
+        selectOptions: [
+          { name: 'evento juridico 1', value: 'eventojuridico1'},
+          { name: 'evento juridico 2', value: 'eventojuridico2'}
+        ],
+        modelProperty : 'starteventterceirprop'
+      }
     ))
+    // group.entries.push(entryFactory.toggleSwitch(translate,
+    //   {
+    //     id : 'starteventterceiraprop',
+    //     description : 'prop 3 primeiro evento',
+    //     label : 'PrimeiroEventoJuridico',
+    //     modelProperty : 'starteventterceirprop'
+    //   }
+    // ))
   }
 
   if (is(element, 'bpmn:Activity')) {
