@@ -3,7 +3,7 @@ import BpmnModeler from 'bpmn-js/lib/Modeler';
 
 import propertiesPanelModule from 'bpmn-js-properties-panel';
 import bpmnPropertiesProviderModule from 'bpmn-js-properties-panel/lib/provider/bpmn';
-import juridicoPropertiesProviderModule from './provider/magic';
+import juridicoPropertiesProviderModule from './provider/juridico';
 import juridicoModdleDescriptor from './descriptors/juridicoProps.json';
 
 import {
@@ -11,7 +11,6 @@ import {
 } from 'min-dash';
 
 import diagramXML from '../resources/newDiagram.bpmn';
-
 
 var container = $('#js-drop-zone');
 

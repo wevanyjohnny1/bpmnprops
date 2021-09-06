@@ -7,7 +7,7 @@ var LOW_PRIORITY = 500;
 // The properties are organized in groups.
 function criarAbaJuridico(element, translate) {
 
-  // Create a group called "Black Magic".
+  // Create a group called "JuridicoGroup".
   var JuridicoGroup = {
     id: 'juridico-tab',
     label: 'Teste Tab',
