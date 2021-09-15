@@ -31,8 +31,8 @@ var bpmnModeler = new BpmnModeler({
 });
 
 function createNewDiagram() {
-  // openDiagram(diagramXML);
-  openDiagram(propsDiagram);
+  openDiagram(diagramXML);
+  // openDiagram(propsDiagram);
 }
 
 async function openDiagram(xml) {
